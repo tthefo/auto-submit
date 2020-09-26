@@ -1,0 +1,73 @@
+#登陆相关配置
+login:
+  #开放的模拟登陆api服务器地址
+  api: "http://www.zimo.wiki:8080/wisedu-unified-login-api-v1.0/api/login"
+#用户组配置
+users:
+  #单个用户配置
+  - user:
+      #username 学号或者工号
+      username: '20171234'
+      #password 密码
+      password: '123456'
+      #address 地址，定位信息
+      address: 中国山东省泰安市泰山区
+      #email 接受通知消息的邮箱
+      email: 123456789@qq.com
+      #school 学校全称
+      school: 山东农业大学
+  #多用户配置，将下面的注释去掉即可，如果有表单内容有图片，不建议使用多用户配置
+#  - user:
+#      #username 学号或者工号
+#      username: 161105024
+#      #password 密码
+#      password: 161105024
+#      #address 地址
+#      address: 中国四川省成都市金牛区一环路北1段-129号-附9号
+#      #email 接受通知消息的邮箱
+#      email: 461009747@qq.com
+#      school: 宜宾学院
+#今日校园相关配置
+cpdaily:
+  #表单组默认选项配置
+  defaults:
+    #表单默认选项配置，按顺序，注意，只有标必填项的才处理
+    - default:
+        #表单项类型，对应今日校园接口返回的fieldType字段，1代表文本，2代表单选，3代表多选，4代表图片
+        type: 2
+        #表单项标题
+        title: 自1月22日以来，是否为确诊病例、疑似病例、无症状感染者
+        #表单项默认值
+        value: 否
+    - default:
+        type: 2
+        title: 自1月22日以来，是否为密切接触者
+        value: 否
+    - default:
+        type: 2
+        title: 所在社区（村居）21天内是否发生疫情
+        value: 否
+    - default:
+        type: 2
+        title: 近14天是否为发热和/或呼吸道等症状未痊愈者
+        value: 否
+    - default:
+        type: 2
+        title: 近14天内本人或家庭成员是否有疫情重点地区（含国内外）旅行史和接触史
+        value: 否
+    - default:
+        type: 2
+        title: 当日是否进行核酸或抗体检测？
+        value: 否
+    - default:
+        type: 5
+        title: 昨天午间体温是______℃
+        value: 36.5
+    - default:
+        type: 5
+        title: 昨天晚间体温是______℃
+        value: 36.5
+    - default:
+        type: 5
+        title: 今天早间体温是______℃
+        value: 36.5
